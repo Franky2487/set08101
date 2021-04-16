@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contact Us</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+        <!-- load stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+        <!-- Google web font "Open Sans" -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Bootstrap style -->
+        <link rel="stylesheet" href="css/style_01.css">
+    </head>
+    <body>
+	<audio autoplay="true" src="valhalla_official_soundtrack.mp3" loop="infinite"></audio>
+        <!-- navbar -->
+        <nav class="navbar tm-main-nav">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+            &#9776;
+            </button>
+            <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="story.html" class="nav-link"><strong>Story</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="game.html" class="nav-link"><strong>Game</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="flipping_gallery-master/demo/flipping_gallery_demo.html" class="nav-link"><strong>Gallery</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="video_gallery.html" class="nav-link"><strong>Video</strong></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="contact.html" class="nav-link"><strong>Contact</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="info.html" class="nav-link"><strong>Info</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="tm-contact-img-container"> </div>
+        <section class="tm-section">
+            <div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+						<section>
+							<h3 class="tm-gold-text tm-form-title"><strong>Contact Form</strong></h3>
+							<form action="index.html" method="post" class="tm-contact-form">
+								<div class="form-group">
+									<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
+								</div>
+								<div class="form-group">
+									<input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
+								</div>
+								<div class="form-group">
+									<input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject"  required/>
+								</div>
+								<div class="form-group">
+									<textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
+								</div>
+								<button type="submit" class="tm-btn"><strong>Submit</strong></button>
+							</form>
+						</section>
+						<section class="tm-margin-t-mid tm-map-section">
+							<h3 class="tm-gold-text tm-form-title"><strong>Find us with Google !</strong></h3>
+							<div id="google-map"></div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 tm-contact-right">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="tm-aside-container">
+									<h3 class="tm-gold-text tm-title">
+										<strong>Extra Forms</strong>
+									</h3>
+									<nav>
+										<ul class="nav">
+											<li><a href="booking_form.html" class="tm-text-link"><strong>BOOKING FORM</strong> </a></li>
+											<li><a href="feedback.html" class="tm-text-link"><strong>FEEDBACK FORM</strong></a></li>
+										</ul>
+									</nav>
+									<br /><br />
+									<br /><br />
+									<hr class="tm-margin-t-small">
+									<h3 class="tm-gold-text tm-title tm-margin-t-small">
+										<strong>Links</strong>
+									</h3>
+									<nav>
+										<ul class="nav">
+											<li><a href="https://www.youtube.com/watch?v=sb6WlQiaJeM" class="tm-text-link"><strong>Scotland View</strong></a></li>
+											<li><a href="https://www.youtube.com/watch?v=KA_CLal14u4" class="tm-text-link"><strong>Drone Video</strong></a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+								<div class="tm-content-box tm-content-box-contact">
+									<img src="./icon/icon3.jpg" alt="image" class="tm-margin-b-20 img-fluid">                                                                  
+									<a href="https://www.icelandtravel.is/blog/vikings-in-iceland/" class="tm-btn text-uppercase"><strong>Detail</strong></a>    
+								</div>
+								<div class="tm-content-box tm-margin-t-mid tm-content-box-contact">
+									<img src="./icon/icon1.jpg" alt="image" class="tm-margin-b-20 img-fluid">                                                                     
+									<a href="https://www.ancient-origins.net/unexplained-phenomena/vikings-south-america-0013694" class="tm-btn text-uppercase"><strong>Read</strong></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+            </div>
+        </section>
+        <footer class="tm-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 tm-copyright-col">
+                        <p class="tm-copyright-text"><strong>Copyright &copy; 2021</strong></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> 
+        <script src="js/bootstrap.min.js"></script>                 
+        <script>     
+            /* Google map
+            ------------------------------------------------*/
+            var map = '';
+            var center;
+            
+            function initialize() {
+                var mapOptions = {
+                    zoom: 16,
+                    center: new google.maps.LatLng(56.071739, -3.452151),
+                    scrollwheel: false
+                };
+            
+                map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
+            
+                google.maps.event.addDomListener(map, 'idle', function() {
+                  calculateCenter();
+                });
+            
+                google.maps.event.addDomListener(window, 'resize', function() {
+                  map.setCenter(center);
+                });
+            }
+            
+            function calculateCenter() {
+                center = map.getCenter();
+            }
+            
+            function loadGoogleMap(){
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
+                document.body.appendChild(script);
+            }
+            
+            // DOM is ready
+            $(function() {
+            
+                // Google Map
+                loadGoogleMap();
+            });
+            
+        </script>             
+    </body>
+</html>

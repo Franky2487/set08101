@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Gallery</title>
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='flipping_gallery.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../css/bootstrap.min.css">
+        <!-- Bootstrap style -->
+        <link rel="stylesheet" href="../../css/style_01.css">
+        <script src="jquery-1.9.1.js"></script>
+        <script src="jquery.flipping_gallery.js"></script>
+        <style>
+            html {
+            height: 100%;
+            }
+            body {
+            background: url(img/background.png);
+            padding: 0;
+            text-align: center;
+            font-family: 'open sans';
+            position: relative;
+            margin: 0;
+            height: 100%;
+            }
+            .wrapper {
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto; 
+            overflow: hidden;
+            }
+            a {
+            text-decoration: none;
+            }
+            h1, h2 {
+            width: 100%;
+            float: left;
+            }
+            h1 {
+            margin-top: 100px;
+            color: #00B0FF;
+            margin-bottom: 5px;
+            font-size: 70px;
+            letter-spacing: -4px;
+            }
+            h2 {
+            letter-spacing: 0px;
+            color: rgba(255,255,255,0.65);
+            font-weight: 100;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            }
+            .pointer {
+            color: #00B0FF;
+            font-family: 'Pacifico';
+            font-size: 24px;
+            margin-top: 15px;
+            position: absolute;
+            top: 130px;
+            right: -40px;
+            }
+            .pointer2 {
+            color: #00B0FF;
+            font-family: 'Pacifico';
+            font-size: 24px;
+            margin-top: 15px;
+            position: absolute;
+            top: 130px;
+            left: -40px;
+            }
+            pre {
+            margin: 80px auto;
+            }
+            pre code {
+            padding: 35px;
+            border-radius: 5px;
+            font-size: 15px;
+            background: rgba(0,0,0,0.1);
+            border: rgba(0,0,0,0.05) 5px solid;
+            max-width: 500px;
+            }
+            .main {
+            float: left;
+            width: 100%;
+            margin: 0 auto;
+            }
+            .main h1 {
+            padding:20px 50px 10px;
+            float: left;
+            width: 100%;
+            font-size: 60px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-weight: 100;
+            margin: 0;
+            padding-top: 25px;
+            font-family: 'Noto Serif';
+            font-style: italic;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            }
+            .main h1.demo1 {
+            background: #1ABC9C;
+            }
+            .reload.bell {
+            font-size: 12px;
+            padding: 20px;
+            width: 45px;
+            text-align: center;
+            height: 47px;
+            border-radius: 50px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            }
+            .reload.bell #notification {
+            font-size: 25px;
+            line-height: 140%;
+            }
+            .reload, .btn{
+            display: inline-block;
+            border: 4px solid #A2261E;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            background: #CC3126;
+            display: inline-block;
+            line-height: 100%;
+            padding: 0.7em;
+            text-decoration: none;
+            color: #0D2633;
+            width: 100px;
+            line-height: 140%;
+            font-size: 17px;
+            font-family: open sans;
+            font-weight: bold;
+            }
+            .reload:hover{
+            background: #A2261E;
+            }
+            .btn {
+            width: 200px;
+            color: #0D2633;
+            border: none;
+            margin-left: 10px;
+            background: #00B0FF;
+            }
+            .clear {
+            width: auto;
+            }
+            .btn:hover, .btn:hover {
+            background: #00CDFF;
+            }
+            .btns {
+            width: 410px;
+            margin: 50px auto;
+            }
+            .credit {
+            font-family: "noto serif";
+            font-style: italic;
+            text-align: center;
+            color: #3D5455;
+            color: rgba(255,255,255,0.35);
+            padding: 10px;
+            margin: 0 0 40px 0;
+            float: left;
+            width: 100%;
+            letter-spacing: 1px;
+            }
+            .credit a {
+            text-decoration: none;
+            font-weight: bold;
+            color: rgba(255,255,255,0.55);
+            }
+            .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            display: block;
+            padding: 7px;
+            width: 100%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background: rgba(0,0,0,0.25);
+            font-weight: bold;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            -webkit-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+            }
+            .back:hover {
+            background: rgba(0,0,0,0.5);
+            }
+            .page-container {
+            max-width: 700px;
+            margin: auto;
+            position: relative;
+            }
+            .page-container p{
+            font-size: 21px;
+            font-weight: 100;
+            line-height: 180%;
+            }
+            .page-container h3 {
+            font-family: "noto serif";
+            font-size: 23px;
+            }
+            .gallery {
+            width: 500px;
+            height: 333px;
+            margin: 150px auto 100px;
+            }
+            .navigation {
+            margin-bottom: 150px;
+            }
+            .fg-card, .fg-card > img {
+            border-radius: 3px;
+            }
+            .fg-caption {
+            color: white;
+            font-style: italic;
+            font-family:noto serif;
+            font-size: 24px;
+            }
+        </style>
+        <script>
+            $(document).ready( function() {
+              $(".gallery").flipping_gallery({
+                enableScroll: true,
+                autoplay: 2000
+              });
+              
+              $(".next").click(function() {
+                $(".gallery").flipForward();
+                return false;
+              });
+              $(".prev").click(function() {
+                $(".gallery").flipBackward();
+                return false;
+              });
+            });
+            
+        </script>
+    </head>
+    <body>
+	<audio autoplay="true" src="../../valhalla_official_soundtrack.mp3" loop="infinite"></audio>
+        <!-- navbar -->
+        <nav class="navbar tm-main-nav">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+            &#9776;
+            </button>
+            <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../story.html" class="nav-link"><strong>Story</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../game.html" class="nav-link"><strong>Game</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="flipping_gallery_demo.html" class="nav-link"><strong>Gallery</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../video_gallery.html" class="nav-link"><strong>Video</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../contact.html" class="nav-link"><strong>Contact</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../info.html" class="nav-link"><strong>Info</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="main">
+                <div class="header">
+                    <h1>Gallery Game</h1>
+                    <div class="btns">
+                        <a class="reload btn" href="">Welcome</a>
+                    </div>
+                </div>
+                <div class="page-container">
+                    <div class="pointer2">Click Me</div>
+                    <div class="pointer">Scroll Me</div>
+                    <div class="gallery">         
+					    <a href="#" data-caption="Viking Hero"><img alt="" src="img/viking1.jpg"></a>
+					    <a href="#" data-caption="Viking Hero"><img alt="" src="img/viking2.jpg"></a>
+                        <a href="#" data-caption="Scottish Old Castle, Skye"><img alt="" src="images/scotland5.jpg"></a>
+                        <a href="#" data-caption="Scottish Highlands"><img alt="" src="images/scotland6.jpg"></a>
+                        <a href="#" data-caption="Scotland!"><img alt="" src="images/scotland9.png"></a>
+                        <a href="#" data-caption="Scotland Countryside"><img alt="" src="images/scotland10.jpg"></a>
+					    <a href="#" data-caption="Valhalla"><img alt="" src="img/ragnar01.jpg"></a>
+						 <a href="#" data-caption="Valhalla Game"><img alt="" src="img/Valhalla03.jpg"></a>
+						<a href="#" data-caption="Viking Hero"><img alt="" src="img/Valhalla1.jpg"></a>
+					    <a href="#" data-caption="Valhalla"><img alt="" src="img/vikingx11.jpg"></a>
+						 <a href="#" data-caption="Valhalla Game"><img alt="" src="img/viking3.jpg"></a>
+						 <a href="#" data-caption="Valhalla "><img alt="" src="img/Vikingx10.jpg"></a>
+						
+                    </div>
+                    <div class="navigation">
+                        <a href="#" class="btn prev">Previous</a>
+                        <a href="#" class="btn next">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="tm-footer">
+            <div class="container-fluid">
+				<div class="row">
+					<div class="row">
+						<div class="col-xs-12 tm-copyright-col">
+							<p class="tm-copyright-text"><strong>Copyright 2021</strong></p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </footer>
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+        <script src="js/bootstrap.min.js"></script>  
+    </body>
+</html>

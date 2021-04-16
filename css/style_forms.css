@@ -1,0 +1,24 @@
+.tm-gold-text-forms { color: #808080; }
+
+.forms-btn {
+	color: white;
+	background-color: #ccc;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 30px;
+}
+
+.forms-btn-reset {
+	color: white;
+	background-color: #000;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 30px;
+	margin-left:10px;
+}
+
+.tm-booking-feedback-form { padding-top: 20px; }
+
+.date_time_show {color: white;font-size:14px;}
